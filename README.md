@@ -1,7 +1,7 @@
 # mp3size.js
 
 <p align="center" style="text-align: center; margin: auto">
-	<img src="https://github.com/igorskyflyer/mp3size.js/raw/master/public/mp3size.js.png" alt="mp3size.js logo" style="max-width: 220px">
+	<img src="https://github.com/igorskyflyer/mp3size.js/raw/master/public/mp3size.js.png">
 	<h3 align="center">Calculates an estimated file size of Mp3 files.</h3>
 </p>
 <br>
