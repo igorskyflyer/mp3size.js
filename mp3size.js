@@ -12,7 +12,7 @@
  */
 
 /**
- * File size per second for each bitrate
+ * File size per second for each bitrate, see http://www.audiomountain.com/tech/audio-file-size.html.
  *
  * Format: bitrate/file size (in kbps/KB)
  */
