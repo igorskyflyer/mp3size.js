@@ -15,6 +15,7 @@
  * File size per second for each bitrate, see http://www.audiomountain.com/tech/audio-file-size.html.
  *
  * Format: bitrate/file size (in kbps/KB)
+ * @private
  */
 const bitrateSizes = {
   8: 1,
@@ -37,8 +38,9 @@ const bitrateSizes = {
 
 /**
  * Gets the size of 1 second of Mp3 file for the provided bitrate.
+ * @private
  * @param {number} rate the bitrate, defaults to 160
- * @returns {number}
+ * @returns {number} the size of 1 second of Mp3 file
  */
 function getBitrate(rate = 160) {
   if (rate in bitrateSizes) {
@@ -50,6 +52,7 @@ function getBitrate(rate = 160) {
 
 /**
  * Parses and returns the time of the Mp3 file.
+ * @private
  * @param {string} time expects HH:MM:ss or MM:ss formatted string
  * @returns {number} the number of seconds or -1 if the provided input is not valid
  */
@@ -86,6 +89,7 @@ function getAudioLength(time) {
 
 /**
  * Gets the estimated size of the Mp3 file based on the audio time and bitrate.
+ * @public
  * @param {string} time the length of the Mp3 file
  * @param {number} bitrate the bitrate of the file, defaults to 160
  * @returns {string} the estimated Mp3 file size or 0KB in case of an error
