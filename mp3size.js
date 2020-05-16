@@ -76,6 +76,8 @@ function getAudioLength(time) {
         const seconds = params[2]
 
         return hours * 3600 + minutes * 60 + seconds * 1
+      } else {
+        return -1
       }
     } else {
       return -1
