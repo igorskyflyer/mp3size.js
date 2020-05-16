@@ -68,16 +68,14 @@ function getAudioLength(time) {
  * @public
  * @param {string} time the length of the Mp3 file
  * @param {number} rate the bitrate of the file, defaults to 160
- * @returns {string} the estimated Mp3 file size or 0KB in case of an error
+ * @returns {number} the estimated Mp3 file size (in KB) or -1 in case of an error
  */
 function getFileSize(time, rate = 160) {
   const audioLength = getAudioLength(time)
 
-  if (audioLength !== -1) {
-    const size = audioLength * getBitrate(rate)
-
-    return `${size}KB`
+  if (audioLength > -1) {
+    return audioLength * getBitrate(rate)
   } else {
-    return '0KB'
+    return -1
   }
 }
