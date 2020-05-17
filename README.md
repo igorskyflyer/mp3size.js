@@ -12,9 +12,9 @@
 
 > Gets the estimated size of the Mp3 file based on the audio time and bitrate.
 
-- time: string time the length of the Mp3 file, expects either HH:MM:ss or MM:ss format
+- time: string, time the length of the Mp3 file, expects either HH:MM:ss or MM:ss format
 
-- rate: number the bitrate of the file, defaults to 160
+- rate: number, the bitrate of the file, defaults to 160
 
 returns a number, the estimated Mp3 file size or -1 in case of an error
 
