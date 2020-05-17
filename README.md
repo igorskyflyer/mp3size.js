@@ -8,7 +8,7 @@
 
 ### Usage
 
-`getFileSize(time: string, rate: number = 160): string`
+`getFileSize(time: string, rate: number = 160): number`
 
 > Gets the estimated size of the Mp3 file based on the audio time and bitrate.
 

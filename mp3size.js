@@ -6,7 +6,7 @@
  * Calculates an estimated file size of Mp3 files.
  *
  * Author: Igor Dimitrijević <igor.dvlpr@gmail.com>, 2020.
- * Version: 1.1
+ * Version: 1.0.6
  * License: MIT, see LICENSE.
  *
  * Note: does NOT validate any input, that's up to you. :)
@@ -15,8 +15,8 @@
 /**
  * Gets the size of 1 second of Mp3 file for the provided bitrate.
  * @private
- * @param {number} rate the bitrate, defaults to 160
- * @returns {number} the size of 1 second of Mp3 file
+ * @param {number} rate the bitrate, defaults to 160Kbps
+ * @returns {number} the size of 1 second of Mp3 file in bits
  */
 function getBitrate(rate = 160) {
   if (rate >= 8) {
