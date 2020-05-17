@@ -6,7 +6,7 @@
  * Calculates an estimated file size of Mp3 files.
  *
  * Author: Igor Dimitrijević <igor.dvlpr@gmail.com>, 2020.
- * Version: 1.0.6
+ * Version: 1.0.9
  * License: MIT, see LICENSE.
  *
  * Note: does NOT validate any input, that's up to you. :)
@@ -58,7 +58,7 @@ function getAudioLength(time) {
     } else {
       return -1
     }
-  } catch {
+  } catch (exp) {
     return -1
   }
 }

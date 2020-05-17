@@ -1,5 +1,9 @@
 # _mp3size.js_
 
+**1.0.9**
+
+- fast-forwarded to 1.0.9 (refer to <a href="https://github.com/igorskyflyer/npm-mp3size">this</a>)
+
 **1.0.6**
 
 - amended version number,
