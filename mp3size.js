@@ -6,7 +6,7 @@
  * Calculates an estimated file size of MP3 files.
  *
  * Author: Igor Dimitrijević <igor.dvlpr@gmail.com>, 2020.
- * Version: 1.1.0
+ * Version: 1.1.1
  * License: MIT, see LICENSE.txt.
  *
  * Note: does NOT validate any input, that's up to you. :)
@@ -107,12 +107,12 @@ function getFileSize(time, rate = 160) {
 /**
  * Gets the estimated audio duration for the provided file size and bitrate.
  * @public
- * @param {int} size file size (in KBs)
- * @param {int} rate bitrate (in Kbps)
- * @returns {string} time string formatted as either MM:ss or HH:MM:ss ( where applicable)
+ * @param {number} size file size (in KB)
+ * @param {number} rate bitrate (in Kbps)
+ * @returns {string} the estimated audio duration formatted as HH:MM:ss or '-1' in case of an error
  */
 function getAudioDuration(size, rate) {
-  if (size === 0 || rate > size) {
+  if (!size || !rate || size === 0 || rate > size) {
     return '-1'
   } else {
     try {
@@ -139,8 +139,8 @@ function getAudioDuration(size, rate) {
  * Gets the estimated bitrate for the provided audio duration and file size.
  * @public
  * @param {string} time the duration of the audio
- * @param {number} size the size of the audio file
- * @returns {number}
+ * @param {number} size the size of the audio file (in KB)
+ * @returns {number} the estimated bitrate or -1 in case of an error
  */
 function getAudioBitrate(time, size) {
   const audioDuration = getDuration(time)
