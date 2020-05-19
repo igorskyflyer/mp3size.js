@@ -2,7 +2,7 @@
 
 **1.1.1**
 
-- various improvments
+- various improvements
 
 <br>
 
