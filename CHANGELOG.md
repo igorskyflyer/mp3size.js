@@ -1,5 +1,17 @@
 # _mp3size.js_
 
+**1.1.1**
+
+- various improvments
+
+<br>
+
+**1.1.0**
+
+- added new functions, getAudioDuration() and getAudioBitrate()
+
+<br>
+
 **1.0.9**
 
 - fast-forwarded to 1.0.9 (refer to <a href="https://github.com/igorskyflyer/npm-mp3size/blob/master/CHANGELOG.md">this</a>)
