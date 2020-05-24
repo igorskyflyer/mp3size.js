@@ -6,7 +6,7 @@
  * Calculates an estimated file size of MP3 files.
  *
  * Author: Igor Dimitrijević <igor.dvlpr@gmail.com>, 2020.
- * Version: 1.1.1
+ * Version: 1.1.2
  * License: MIT, see LICENSE.txt.
  *
  * Note: does NOT validate any input, that's up to you. :)
@@ -50,16 +50,16 @@ function getDuration(time) {
 
       // assuming MM:ss format
       if (count === 2) {
-        const minutes = params[0]
-        const seconds = params[1]
+        const minutes = params[0] || 0
+        const seconds = params[1] || 0
 
         return minutes * 60 + seconds * 1
       }
       // assuming HH:MM:ss format
       else if (count === 3) {
-        const hours = params[0]
-        const minutes = params[1]
-        const seconds = params[2]
+        const hours = params[0] || 0
+        const minutes = params[1] || 0
+        const seconds = params[2] || 0
 
         return hours * 3600 + minutes * 60 + seconds * 1
       } else {
@@ -77,9 +77,13 @@ function getDuration(time) {
  * Pads the number, internal use only.
  * @private
  * @param {number} value the number to pad
- * @returns {string} a string that contains the the padded value
+ * @returns {string} a string that contains the the padded value or an empty string in case of an error
  */
 function padNumber(value) {
+  if (typeof value !== 'number') {
+    return ''
+  }
+
   if (value < 10) {
     return '0' + value
   } else {
@@ -95,6 +99,10 @@ function padNumber(value) {
  * @returns {number} the estimated MP3 file size (in KB) or -1 in case of an error
  */
 function getFileSize(time, rate = 160) {
+  if (typeof time !== 'string') {
+    return -1
+  }
+
   const audioDuration = getDuration(time)
 
   if (audioDuration > -1) {
@@ -143,6 +151,10 @@ function getAudioDuration(size, rate) {
  * @returns {number} the estimated bitrate or -1 in case of an error
  */
 function getAudioBitrate(time, size) {
+  if (typeof time !== 'string') {
+    return -1
+  }
+
   const audioDuration = getDuration(time)
 
   if (audioDuration > -1) {
