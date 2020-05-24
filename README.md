@@ -12,7 +12,7 @@
 
 `getFileSize(time: string, rate: number = 160): number`
 
-> Gets the estimated size of the MP3 file based on the audio time and bitrate.
+> Gets the estimated size of the MP3 file based on the audio duration and bitrate.
 
 - **time**: _string_, the duration of the MP3 file, expects either HH:MM:ss or MM:ss format
 
